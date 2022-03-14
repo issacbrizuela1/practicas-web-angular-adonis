@@ -1,0 +1,39 @@
+<h3>
+    about
+</h3>
+<div class="container">
+    <h1 class="text-center">PRODUCTOS</h1><hr>
+    <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">MARCA</th>
+            <th scope="col">CATEGORIA</th>
+            <th scope="col">COLOR</th>
+            <th scope="col">PROVEEDOR</th>
+            <th scope="col">GENERO</th>
+            <th scope="col">PRECIO</th>
+            <th scope="col">STOCK</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pst of posts">
+            <th scope="row">{{pst.id_producto}}</th>
+            <td>{{pst.nombre}}</td>
+            <td>{{pst.marca}}</td>
+            <td *ngFor="let c of cat">{{c.nombre}}</td>
+            <td>{{pst.color}}</td>
+            <td>{{pst.proveedor}}</td>
+            <td>{{pst.genero}}</td>
+            <td>{{pst.precio_u}}</td>
+            <td>{{pst.stock}}</td>
+            <td>
+              <a class="btn btn-primary" aria-disabled="true">Editar</a>
+              <a class="btn btn-danger">Borrar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div><br><br><br><br><br><br><br><br><br>

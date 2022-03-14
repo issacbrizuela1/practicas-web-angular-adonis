@@ -1,0 +1,14 @@
+<li>
+    <p>nombre:{{nombre}}</p>
+    <p>años:{{years}}</p>
+    <p>calle: {{direccion.calle}}</p>
+    <p>calle: {{direccion.ciudad}}</p>
+    <ul> <p>hobbies:</p>
+        <li *ngFor="let hob of hobbies">
+            {{hob}}
+        </li>
+    </ul>
+    <button (click)="sayhello()">
+        presione
+    </button>
+</li>

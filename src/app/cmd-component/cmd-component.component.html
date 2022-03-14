@@ -1,0 +1,31 @@
+<!--
+<ul>
+    <app-user *ngFor="let us of usuarios" [inuser]="us"></app-user>
+</ul>
+
+-->
+<form (submit)="adduser(nuevousuario)">
+    <input type="text" #nuevousuario>
+    <button style="font-size: 50px;">+</button>
+</form>
+<ul>
+    <li *ngFor="let us of usuarios">
+        {{us}} <button (click)="p(us)">pulsame</button>
+    </li>
+</ul>
+<div>
+    <form>
+        <input type="text" name="nombre" [(ngModel)]="nombres">
+        <input type="text" name="year" [(ngModel)]="num"> <br>
+        nombre: {{nombres}} <br>
+        año: {{num}}
+    </form>
+</div>
+<hr>
+<div *ngFor="let pos of post">
+    <h3>{{pos.title}}</h3>
+    <p> {{pos.body}} </p>
+</div>
+<button (click)="click()">
+    mostrar adonis
+</button>
